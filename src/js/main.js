@@ -1,0 +1,1 @@
+testFunction("passing param to external file-test");

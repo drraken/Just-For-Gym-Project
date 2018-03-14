@@ -1,10 +1,7 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Regular.ttf');
-}
+@import 'variables';
 
 * {
-    font-family: Roboto, sans-serif;
+    font-family: $font-stack;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -25,12 +22,12 @@ body {
             font-weight: bold;
             font-size: 96px;
             margin-bottom: 20px;
-            color: white;
+            color: $primary-color;
         }
         a {
             font-size: 48px;
             margin-bottom: 20px;
-            color: white;
+            color: $primary-color;
             text-decoration: none;
         }
     }
