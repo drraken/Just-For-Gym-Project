@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/Roboto-Regular.ttf');
+}
+
+* {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    main {
+        height: 100vh;
+        background-image: url('../img/hero.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-weight: bold;
+            font-size: 96px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        a {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
