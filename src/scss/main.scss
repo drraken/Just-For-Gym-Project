@@ -8,10 +8,10 @@
 }
 
 body {
-    height: 100vh;
+    height: 200vh;
     main {
-        height: 100vh;
-        background-image: url('../img/hero.jpeg');
+        height: 200vh;
+        background-color: $background-color;
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
@@ -29,6 +29,32 @@ body {
             margin-bottom: 20px;
             color: $primary-color;
             text-decoration: none;
+        }
+
+    }
+}
+
+body {
+    header {
+        background-color: #202020;
+        padding: 10px;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        ul {
+            li:last-child {
+                border-right: none;
+            }
+            li {
+                float: left;
+                display: inline-block;
+                border-right: 1px solid #bbb;
+                a {
+                    padding: 5px;
+                    text-decoration: none;
+                    color: $primary-color;
+                }
+            }
         }
     }
 }
