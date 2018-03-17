@@ -8,39 +8,36 @@
 }
 
 body {
-    height: 200vh;
+    height: 100vh;
     .content-container {
         display: flex;
         max-width: 1180px;
         margin: 0 auto;
     }
-    main {        
+    main {
         background-color: $background-color;
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        align-items: center;
-        .group {
-            
-           margin: 380px auto;
-           height: 1080px;           
+        align-items: center;  
+        height: 1080px;
 
             #check-button {
                 border: solid 2px;
                 border-radius: 40px;
-                color: #ffffff;
+                color: $primary-color;
                 text-align: center;
                 padding: 13px 45px;
                 a {
                     font-size: 36px;
                 }
             }
-            h1 {
+            h1 {                                
                 font-size: 75px;
                 margin-bottom: 36px;
-                color: $primary-color;
+                color: $primary-color;                
             }
             a {
                 font-size: 48px;
@@ -48,10 +45,8 @@ body {
                 color: $primary-color;
                 text-decoration: none;
             }
-        }
+        
     }
-
-
 
     header {
         background-color: $background-color;
@@ -59,38 +54,46 @@ body {
         position: fixed;
         top: 0px;
         width: 100%;
-
         .left-nav {
-            width: 60%;
-            img {
-                position: fixed;
-            }
+            width: 5%;
+        }
+        .mid-nav {
+            width: 55%;
         }
         .right-nav {
             width: 40%;
-
+            display: flex;
+            justify-content: flex-end;
+            img {
+                height: 16px;
+                margin-top: 5px;
+            }
         }
         ul {
-            display: flex;
-            justify-content: center;
             li {
-
                 float: left;
                 display: inline-block;
-                border-right: 1px solid $nav-color;
+                border-right: 1.5px solid $nav-color;
                 &:last-child {
                     border-right: none;
                 }
                 a {
                     font-size: 20px;
                     padding: 8px;
+                    margin: 0px 2px 0px 2px;
                     text-decoration: none;
                     color: $nav-color;
+                    &:active{
+                        color:$primary-color;
+                    }
+                    &:hover{
+                        color:$primary-color;
+                    }
+                     
                 }
+                
+                
             }
-
-
-
         }
 
     }
