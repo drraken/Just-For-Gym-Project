@@ -45,7 +45,10 @@ main {
         font-size: 48px;
         margin-bottom: 20px;
         color: $primary-color;
-        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+            text-decoration: none;
+        }        
     }
 
 }
@@ -56,46 +59,22 @@ header {
     position: fixed;
     top: 0px;
     width: 100%;
-
-    /*.left-nav {
-            width: 5%;
-        }
-        .mid-nav {
-            width: 55%;
-        }
-        .right-nav {
-            width: 40%;
-            display: flex;
-            justify-content: flex-end;
-            img {
-                height: 16px;
-                margin-top: 5px;
-            }
-        }*/
     .container {
         .row {
-            .col-1{
-                max-width: 60px;
-                width: 60px;
-            }
-            .col-2{
-                max-width: 15px;
-                max-height: 18px;
-                padding: 0;
-            }
-            .col-3 {
-                max-width: 165px;  
-                padding: 0;
-                ul{
+            .col-5 {
+                ul {
                     display: flex;
-                    justify-content: center;                    
+                    justify-content: flex-end;
+                    li {
+                        &:nth-last-child(2) {
+                            border: none;
+                        }
+                        &:first-child {
+                            border: none;
+                        }
+
+                    }
                 }
-                
-            }
-            .col-4{
-                max-width: 15px;
-                max-height: 18px;
-                padding: 0;
             }
         }
     }
@@ -111,8 +90,7 @@ header {
                 font-size: 20px;
                 padding: 8px;
                 margin: 0px 2px 0px 2px;
-                text-decoration: none;
-                color: $nav-color;               
+                color: $nav-color;
                 &:hover {
                     color: $primary-color;
                     text-decoration: none;
@@ -129,5 +107,3 @@ header {
     }
 
 }
-
-
