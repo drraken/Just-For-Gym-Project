@@ -5,9 +5,12 @@ html
   include ./includes/head.jade
   body
     include ./includes/header.jade
-    // main
-    main     
-         h1 The choice is yours.
-         div(id='check-button') 
-          a(href='#') Check now
+    include ./includes/overlay.jade
+    
+   
+    
+    main              
+        h1 The choice is yours.
+        div(id='check-button') 
+            a(href='#') Check now
     include ./includes/footer.jade 
