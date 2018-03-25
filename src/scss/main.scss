@@ -28,23 +28,42 @@ body {
             border-radius: 2%;
             
             input{
-                padding: 0px 45px 0px 45px;
-                margin: 40px auto;
+                width: 280px;
+                margin: 25px auto 20px auto;
                 border: none;
                 border-bottom: 1px solid;
-                display: block;  
+                display: block;
+                outline: none;                
                
             }
             #submit{
                    border-radius: 20px 20px 20px 20px;
-                   padding:10px 130px 0px 130px; 
+                  padding:5px 0px 5px 0px;
                    margin:auto;
             }       
             a{
-                margin-top: 10px;
+                margin-top: 20px;
                 display: flex;
                 justify-content: center; 
                 text-decoration: none;
+            }
+            #exitbutton{
+                width: 30px;
+                height: 25px;
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                background: none;
+                border: none;
+                padding: 5px;
+                &:hover {
+                    color: $primary-color;
+                    text-decoration: none;
+                }
+                &:active {
+                    color: $primary-color;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -142,4 +161,7 @@ header {
         }
     }
 
+}
+footer{
+    height: 50px;
 }

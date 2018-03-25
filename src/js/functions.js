@@ -8,6 +8,8 @@ function changeState(state){
         case 2: overlayLayer.classList.remove('is-open')
             loginButton.textContent = 'Hi, Arek';
             break;
+        case 3: overlayLayer.classList.remove('is-open')
+            break;
         default:alert('something went wrong');
     }
 }
