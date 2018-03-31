@@ -3,9 +3,9 @@ html
   include ./includes/head.jade
   body
     include ./includes/overlay.jade
-    include ./includes/header.jade
+    
     // main
-    main
-        
+    main(id='main-id')
+        include ./includes/header.jade    
         h1 About Us
-    include ./includes/footer.jade
+        include ./includes/footer.jade

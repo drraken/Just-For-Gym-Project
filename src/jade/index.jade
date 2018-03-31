@@ -4,13 +4,14 @@ doctype html
 html
   include ./includes/head.jade
   body
-    include ./includes/header.jade
     include ./includes/overlay.jade
     
    
     
-    main              
+    main(id='main-id')          
+        include ./includes/header.jade
+        
         h1 The choice is yours.
         div(id='check-button') 
             a(href='#') Check now
-    include ./includes/footer.jade 
+        include ./includes/footer.jade 

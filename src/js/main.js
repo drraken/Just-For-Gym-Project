@@ -3,6 +3,7 @@ var loginButton =document.getElementById('login');
 var overlayLayer = document.getElementById('overlay');
 var submitLogin = document.getElementById('submit');
 var exitbutton = document.getElementById('exitbutton')
+var mainclose = document.getElementById('main-id')
 
 var state =0;
 
