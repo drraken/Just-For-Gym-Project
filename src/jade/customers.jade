@@ -1,11 +1,11 @@
 doctype html
 html
+  html
   include ./includes/head.jade
-  body
+  body    
     include ./includes/overlay.jade
-     
-    // main
+    include ./includes/header.jade 
     main(id='main-id')
-        include ./includes/header.jade        
-        h1 Customers
-        include ./includes/footer.jade
+        div(class='container')  
+            h1 Customers
+    include ./includes/footer.jade

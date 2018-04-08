@@ -25,6 +25,7 @@ body {
         background-image: url('../img/backgroundoverlay.jpeg');
         background-size: cover;
         display: none;
+        z-index: 999;
         #userbox {
             position: absolute;
             background: #414b5c;
@@ -39,7 +40,7 @@ body {
             }
             p {
                 text-align: center;
-                color: $primary-color;
+                color: black;
             }
             input {
                 width: 280px;
@@ -83,7 +84,7 @@ body {
                 display: flex;
                 justify-content: center;
                 text-decoration: none;
-                color: $primary-color;
+                color: black;
             }
             #exitbutton {
                 width: 30px;
@@ -94,7 +95,7 @@ body {
                 background: none;
                 border: none;
                 padding: 5px;
-                color: $primary-color;
+                color: black;
                 cursor: pointer;
             }
         }
@@ -103,43 +104,19 @@ body {
 }
 
 main {
-    background-color: $background-color;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 1080px;
-    #check-button {
-        border: solid 2px;
-        border-radius: 40px;
-        color: $primary-color;
-        text-align: center;
-        padding: 13px 45px;
-        a {
-            font-size: 36px;
-        }
+    background-color: $background-color;    
+    min-height: 100vh;   
+    h1{
+        position: absolute;       
+        top:200px;
+        color: aqua;
     }
-    h1 {
-        font-size: 75px;
-        margin-bottom: 36px;
-        color: $primary-color;
-    }
-    a {
-        font-size: 48px;
-        margin-bottom: 20px;
-        color: $primary-color;
-        &:hover {
-            color: $primary-color;
-            text-decoration: none;
-        }
-    }
-
+   
 }
 
+
 header {
-    background-color: $background-color;
+    background-color: $nav-background-color;
     padding: 10px;
     position: fixed;
     top: 0px;
@@ -150,6 +127,7 @@ header {
                 ul {
                     display: flex;
                     justify-content: flex-end;
+                    transform: translate(0px, 10px);
                     li {
                         &:nth-last-child(2) {
                             border: none;
@@ -164,6 +142,7 @@ header {
         }
     }
     ul {
+        transform: translate(0%, 10px);
         li {
             float: left;
             display: inline-block;
@@ -194,5 +173,97 @@ header {
 }
 
 footer {
-    height: 50px;
+    height: 200px;
+    background-color: #737373;
+    color: aliceblue;
+    #section-1 {
+        img {
+            top: 40px;
+            position: absolute;
+            right: 50%;
+            transform: translate(50%, 0)
+        }
+        p {
+            position: absolute;
+            top: 130px;
+        }
+
+
+    }
+    #section-2 {
+        ul {
+            position: absolute;
+            top: 20px;
+            li {
+
+                display: block;
+                padding: 8px;
+                a {
+                    color: aliceblue;
+                    text-decoration: none;
+                    &:hover {
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+
+                }
+            }
+        }
+    }
+    #section-3 {
+        ul {
+            position: absolute;
+            top: 20px;
+            li {
+                display: block;
+                padding: 8px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+                a {
+                    margin-left: 8px;
+                    color: aliceblue;
+                    text-decoration: none;
+                    &:hover {
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+
+                }
+            }
+        }
+
+    }
+    #section-4 {
+        #newsletterdiv {
+            position: absolute;
+            top: 50px;
+            #emailbox {
+                border-radius: 5px 5px 5px 5px;
+                border: solid 1px black;
+                padding: 3px 0 3px 3px;
+            }
+            #okbutton {
+                margin-left: 5px;
+                width: 50px;
+                border-radius: 10px;
+                background: #6666ff;
+                color: aliceblue;
+                border: solid 1px black;
+                padding: 3px;
+            }
+        }
+    }
+    #section-5 {
+        #infodiv {
+            position: absolute;
+            top: 25px;
+            margin-left: 10px;
+            p {
+                margin: 0;
+                padding: 2px;
+            }
+        }
+    }
 }
