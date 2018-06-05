@@ -19,7 +19,7 @@ exitbutton.addEventListener('click', (e) => {
 });
 
 var el = document.querySelectorAll(".mySlides");
-if (el.length > 0) { 
+if (el.length > 0) {
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -51,3 +51,33 @@ if (el.length > 0) {
         dots[slideIndex - 1].className += " active";
     }
 }
+
+function heySiriCheckThePassword (l,p){
+    fetch('http://localhost:3009/tasks')
+    .then(response => {
+        return response.json()
+    })
+    .then(data => opierdolDane(data,l,p));
+}
+
+
+function opierdolDane(gruz,l,p){
+    let valid = false;
+    gruz.forEach(smietnik => {
+        if(smietnik.login == l && smietnik.password == p){
+            valid = true;
+        }
+    })
+    
+    console.log( valid ? "zalogoano": "raczej nie");
+}
+
+const button = document.getElementById('dajID');
+
+button.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let login = 'adminss';
+    let password = '789'; //document.getElementById('..').value();
+    
+    heySiriCheckThePassword(login,password);
+})

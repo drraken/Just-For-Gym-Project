@@ -167,8 +167,6 @@ main {
         }
     }
 }
-
-
 header {
     //background-color: rgba(77, 77, 77, 0.7);
 
@@ -227,7 +225,6 @@ header {
     }
 
 }
-
 #main-index {
     img {
         height: 100vh;
@@ -257,7 +254,6 @@ header {
         font-size: 30px;
     }
 }
-
 #main-customers {
     background-image: url(../img/background-customers.jpg);
     background-size: cover;
@@ -378,6 +374,9 @@ header {
         background-color: rgba(0,0,0,0.8);
 
     }
+}
+#main-product{
+    background-color: gray;
 }
 #main-contact{
     background-color: #3b4152;
