@@ -4,7 +4,6 @@
 var mongoose = require('mongoose'),
   Task = mongoose.model('User');
 
-console.log(Task);
 
 exports.list_all_tasks = function(req, res) {
 res.header("Access-Control-Allow-Origin", "*");
@@ -20,6 +19,7 @@ res.header("Access-Control-Allow-Origin", "*");
 
 exports.create_a_task = function(req, res) {
 //    console.log(req);
+res.header("Access-Control-Allow-Origin", "*");
   var new_task = new Task(req.body);
   new_task.save(function(err, task) {
     if (err)

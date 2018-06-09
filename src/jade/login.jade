@@ -1,0 +1,16 @@
+doctype html
+html
+include ./includes/head.jade
+body
+    main(id='main-login')   
+        div(id='overlay')
+            div(id='userbox')   
+                a(href='../index.html' id='exitbutton') X
+                img(id='userboxlogo' src='../img/userboxlogo.png')
+                p JUST FOR GYM
+                form(id='loginform')
+                    input(type='text' placeholder='Login' id='login-box')
+                    input(type='password' placeholder='Password' id='password-box')
+                    input(type='submit' id='submit-login' value='Log In')  
+                a(href='../create.html') Create an account
+script(src='js/login.js') 

@@ -3,11 +3,9 @@
 doctype html
 html
   include ./includes/head.jade
-  body
-    include ./includes/overlay.jade  
+  body    
     include ./includes/header.jade
-    main(id='main-index')          
-         
+    main(id='main-index')         
         div(class='content')         
             img(src='../img/ONYX.jpg')
             h1 JustForGym
@@ -18,3 +16,4 @@ html
           
                               
     include ./includes/footer.jade 
+    script(src='js/index.js')

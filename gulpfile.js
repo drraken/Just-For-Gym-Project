@@ -5,7 +5,7 @@ var jade        = require('gulp-jade');
 var concat      = require('gulp-concat');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['jade','sass', 'scripts'], function() {
+gulp.task('serve', ['jade','sass'/*, 'scripts'*/], function() {
 
     browserSync.init({
         server: "./app"
@@ -13,11 +13,11 @@ gulp.task('serve', ['jade','sass', 'scripts'], function() {
 
     gulp.watch("src/scss/*.scss", ['sass']);
     gulp.watch("src/jade/**/*.jade", ['jade']);
-    gulp.watch("src/js/*.js", ['scripts']);
+   /* gulp.watch("src/js/*.js", ['scripts']);*/
 //    gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
-// Compile sass into CSS & auto-inject into browsers
+/* Compile sass into CSS & auto-inject into browsers*/
 gulp.task('sass', function() {
     return gulp.src("src/scss/main.scss")
         .pipe(sass({
@@ -34,11 +34,11 @@ gulp.task('jade', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function() {
-  return gulp.src('src/js/*.js')
+/*gulp.task('scripts', function() {
+  return gulp.src('src/js/*.js')     
     .pipe(concat('index.js'))
     .pipe(gulp.dest('app/js/'))
     .pipe(browserSync.stream());
-});
+});*/
 
 gulp.task('default', ['serve']);

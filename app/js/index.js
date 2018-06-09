@@ -1,61 +1,37 @@
-/*var mysql = require("mysql");
-var connection = mysql.createConnection({
-    host: "Arkadiusz-KOMP",
-    user: "root",
-    password: "12345",
-    database: "clients"
-});
-
-connection.connect();
-connection.query('SELECT * from <clients>', function (err, rows, fields) {
-    if (!err)
-        console.log('The solution is: ', rows);
-    else
-        console.log('Error while performing query.');
-});
-
-connection.end();
-*/
-
-function testFunction(param){
-    console.log(param);
-}
-function changeState(state){
-    switch(state){
-        case 1: overlayLayer.classList.add('is-open');
-                mainclose.classList.add('is-close');
-            break;
-        case 2: overlayLayer.classList.remove('is-open');
-                mainclose.classList.remove('is-close');
-            loginButton.textContent = 'Hi, Arek';
-            break;
-        case 3: overlayLayer.classList.remove('is-open');
-                mainclose.classList.remove('is-close');
-            break;
-        default:alert('something went wrong');
-    }
-}
-
-testFunction("passing param to external file-test");
-var loginButton = document.getElementById('login');
+/*var loginButton = document.getElementById('login-header');
 var overlayLayer = document.getElementById('overlay');
-var submitLogin = document.getElementById('submit');
 var exitbutton = document.getElementById('exitbutton')
 var mainclose = document.getElementById('main-id')
 
-var state = 0;
+if (typeof loginButton != "undefined") {
+    function changeState(state) {
+        switch (state) {
+            case 1:
+                overlayLayer.classList.add('is-open');
+                mainclose.classList.add('is-close');
+                break;
+            case 2:
+                overlayLayer.classList.remove('is-open');
+                mainclose.classList.remove('is-close');
+                break;
+            default:
+                alert('something went wrong');
+        }
+    }
 
-loginButton.addEventListener('click', (e) => {
-    changeState(1);
-});
+    var state = 0;
 
-submitLogin.addEventListener('click', (e) => {
-    changeState(2);
-});
-exitbutton.addEventListener('click', (e) => {
-    changeState(3);
-});
 
+    loginButton.addEventListener('click', (e) => {
+        changeState(1);
+    });
+
+    exitbutton.addEventListener('click', (e) => {
+        changeState(2);
+    });
+} else {
+    console.log('Couldn`t find any loginButton')
+}*/
 var el = document.querySelectorAll(".mySlides");
 if (el.length > 0) {
     var slideIndex = 1;
@@ -90,32 +66,75 @@ if (el.length > 0) {
     }
 }
 
-function heySiriCheckThePassword (l,p){
+/*
+function heySiriCheckThePassword(l, p) {
     fetch('http://localhost:3009/tasks')
-    .then(response => {
-        return response.json()
-    })
-    .then(data => opierdolDane(data,l,p));
+        .then(response => {
+            return response.json()
+        })
+        .then(data => opierdolDane(data, l, p));
 }
 
 
-function opierdolDane(gruz,l,p){
+function opierdolDane(gruz, l, p) {
     let valid = false;
     gruz.forEach(smietnik => {
-        if(smietnik.login == l && smietnik.password == p){
+        if (smietnik.login == l && smietnik.password == p) {
             valid = true;
         }
     })
-    
-    console.log( valid ? "zalogoano": "raczej nie");
+    if (valid) {
+        console.log('zalogowano')
+        window.location.replace("http://localhost:3000/index.html");
+    } else {
+        alert('Złe dane logowania!');
+    }
 }
 
-const button = document.getElementById('dajID');
+const button = document.getElementById('submit-login');
+if (typeof button != "undefined") {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        let login = document.getElementById('login-box').value;
+        let password = document.getElementById('password-box').value;
 
-button.addEventListener('click',(e)=>{
-    e.preventDefault();
-    let login = 'adminss';
-    let password = '789'; //document.getElementById('..').value();
-    
-    heySiriCheckThePassword(login,password);
-})
+        heySiriCheckThePassword(login, password);
+
+    })
+}
+*/
+
+/*const button_reg = document.getElementById('submit-reg');
+if (typeof button_reg != "undefined") {
+    console.log('checkigntrtesrs');
+
+    function addSomeNewData(login_reg, email_reg, password_reg) {
+
+        const User = {
+            login: login_reg,
+            email: email_reg,
+            password: password_reg,
+        }
+
+        fetch('http://localhost:3009/tasks', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new FormData(User)
+            })
+            .then(response => {
+                return response.json()
+            })
+            .then(data => console.log(data));
+    }
+    button_reg.addEventListener('click', (e) => {
+        e.preventDefault();
+        let login_reg = document.getElementById('login-reg-box').value;
+        let email_reg = document.getElementById('email-reg-box').value;
+        let password_reg = document.getElementById('password-reg-box').value;
+        console.log('button working fine');
+        addSomeNewData(login_reg, email_reg, password_reg);
+
+    })
+}*/
