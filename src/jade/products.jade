@@ -1,9 +1,63 @@
 doctype html
 html
-  include ./includes/head.jade
-  body    
+include ./includes/head.jade
+body    
     include ./includes/header.jade 
     main(id='main-product')
         div(class='container')  
-            h1 Products
+           p Men's sports wear
+           div(class='row')                
+                div(class='col-3')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_1.jpg')
+                        p Green JFG<br />T-shirt<br />Prize: 50$
+                        input(type='submit' value='Add to cart' id='add-product-1')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_5.jpg')
+                        p Grey JFG<br />Tank Top<br />Prize: 40$
+                        input(type='submit' value='Add to cart' id='add-product-5')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_9.jpg')
+                        p Green JFG<br />Hoodie<br />Prize: 80$
+                        input(type='submit' value='Add to cart' id='add-product-5')
+                div(class='col-3')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_2.jpg') 
+                        p Grey JFG<br />T-shirt<br />Prize: 50$
+                        input(type='submit' value='Add to cart' id='add-product-2')    
+                    div(class='product-container')
+                        img(src='../img/product_img/product_6.jpg')
+                        p Grey JFG<br />Long Sleeve<br />Prize: 75$
+                        input(type='submit' value='Add to cart' id='add-product-6')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_10.jpg')
+                        p Grey JFG<br />Long Sleeve<br />Prize: 75$
+                        input(type='submit' value='Add to cart' id='add-product-5')
+                div(class='col-3')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_3.jpg')
+                        p Light Grey JFG<br />T-shirt<br />Prize: 50$
+                        input(type='submit' value='Add to cart' id='add-product-3')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_7.jpg')
+                        p Dark Grey JFG<br />Long Sleeve<br />Prize: 75$
+                        input(type='submit' value='Add to cart' id='add-product-7')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_11.jpg')
+                        p Black Onyx JFG<br />T-shirt<br />Prize: 50$
+                        input(type='submit' value='Add to cart' id='add-product-5')
+                div(class='col-3')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_4.jpg')
+                        p Green JFG<br />Tank Top<br />Prize: 40$
+                        input(type='submit' value='Add to cart' id='add-product-4')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_8.jpg')
+                        p Grey JFG<br />T-shirt<br />Prize: 50$
+                        input(type='submit' value='Add to cart' id='add-product-8')
+                    div(class='product-container')
+                        img(src='../img/product_img/product_12.jpg')
+                        p Black Onyx JFG<br />Hoodie<br />Prize: 100$
+                        input(type='submit' value='Add to cart' id='add-product-5')
     include ./includes/footer.jade
+    script(src='js/product.js')
