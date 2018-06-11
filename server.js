@@ -23,3 +23,11 @@ routes(app);
 app.listen(port);
 
 console.log('JFG RESTful API server started on: ' + port);
+
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('app', path.join(__dirname, 'app'))
+  .set('view engine', 'html')
+  .get('/', (req, res) => res.render('index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
