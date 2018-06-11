@@ -30,5 +30,5 @@ express()
   .use(express.static(path.join(__dirname, 'app/css')))
   .set('views', path.join(__dirname, 'app'))
   .set('view engine', 'html')
-  .get('app/index', (req, res) => res.render('index'))
+  .get('app/', (req, res) => res.render('index'))
   
