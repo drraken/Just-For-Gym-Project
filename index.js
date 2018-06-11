@@ -26,9 +26,9 @@ app.listen(port);
 console.log('JFG RESTful API server started on: ' + port);
 
 
-app
-  .use(express.static(path.join(__dirname, './app/css')))
-  .set('views', path.join(__dirname, './app'))
+express()
+  .use(express.static(path.join(__dirname, 'app/css')))
+  .set('views', path.join(__dirname, 'app'))
   .set('view engine', 'html')
   .get('app/index', (req, res) => res.render('index'))
   
