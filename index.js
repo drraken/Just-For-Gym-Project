@@ -1,5 +1,5 @@
-var express = require('express'),
-var path = require('path')
+const express = require('express'),
+const path = require('path')
   app = express(),
   port = process.env.PORT || 5000,
   mongoose = require('mongoose'),
@@ -28,7 +28,8 @@ console.log('JFG RESTful API server started on: ' + port);
 
 express()
   .use(express.static(path.join(__dirname, 'app/css')))
-  .set('views', path.join(__dirname, 'app'))
+  .set('app', path.join(__dirname, 'app'))
   .set('view engine', 'html')
   .get('app/', (req, res) => res.render('index'))
+ .listen(PORT, () => console.log(`Listening on ${ PORT }`))
   
