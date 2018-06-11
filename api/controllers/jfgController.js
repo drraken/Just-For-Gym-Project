@@ -17,7 +17,7 @@ res.header("Access-Control-Allow-Origin", "*");
   });
 };
 
-exports.list_all_tasks = function(req, res) {
+exports.list_all_tasks1 = function(req, res) {
 res.header("Access-Control-Allow-Origin", "*");
   Task1.find({}, function(err, task) {
     if (err)
@@ -40,7 +40,7 @@ res.header("Access-Control-Allow-Origin", "*");
   });
 };
 
-exports.create_a_task = function(req, res) {
+exports.create_a_task1 = function(req, res) {
 //    console.log(req);
 res.header("Access-Control-Allow-Origin", "*");
   var new_task = new Task1(req.body);

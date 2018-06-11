@@ -4,7 +4,7 @@
 * {
     font-family: $font-stack;
     box-sizing: border-box;
-    margin: 0;
+    margin: 0;  
     padding: 0;
 }
 
@@ -115,6 +115,7 @@ main.is-close {
         img {
             width: 100%;
             height: 100vh;
+            
         }
     }
     #about-section {
@@ -225,6 +226,7 @@ header {
 #main-index {
     img {
         height: 100vh;
+        width: 100%;
     }
     h1 {
         position: absolute;
@@ -579,6 +581,14 @@ header {
 
 }
 
+#main-mycart{
+    height: 100vh;
+    background-color: black;
+    p {
+        color: white;
+    }
+    
+}
 footer {
     height: 200px;
     background-color: #3e4354; //#737373;
@@ -674,3 +684,4 @@ footer {
         }
     }
 }
+  

@@ -1,28 +1,28 @@
 doctype html
 html
-include ./includes/head.jade
-body
-    main(id='main-create')
-        div(id='create-holder')
-            div(id='registery-box')             
-                    div(class='row')
-                        div(class='col-7')
-                            img(src='../img/create-left.jpg' id='create-left-img')
-                            p Create and wear<br />your passion
-                            a(href='../about.html' id='learn-more-button') LEARN MORE
-                            p(id='need-help') Need help?
-                            a(href='../contact.html' id='FAQ') FAQ
-                        div(class='col-5')                   
-                                a(href='../index.html' id='exit-create-button') X    
-                                p Create an account
-                                form(id='registryform')
-                                        label Choose a username:
-                                        input(type='text' class='reg-form' placeholder='Type your username here' id='login-reg-box')
-                                        label Email address:
-                                        input(type='text' class='reg-form' placeholder='Type your email address here' id='email-reg-box')
-                                        label Choose a password:
-                                        input(type='password' class='reg-form' placeholder='Type your password here' id='password-reg-box')
-                                        input(type='submit' id='submit-reg' value='SIGN UP')
-                                        a(href='../login.html') I already have an account
-                               
-script(src='js/create.js')           
+    include ./includes/head.jade
+    body
+        main(id='main-create')
+            div(id='create-holder')
+                div(id='registery-box')             
+                        div(class='row')
+                            div(class='col-7')
+                                img(src='../img/create-left.jpg' id='create-left-img')
+                                p Create and wear<br />your passion
+                                a(href='../about.html' id='learn-more-button') LEARN MORE
+                                p(id='need-help') Need help?
+                                a(href='../contact.html' id='FAQ') FAQ
+                            div(class='col-5')                   
+                                    a(href='../index.html' id='exit-create-button') X    
+                                    p Create an account
+                                    form(id='registryform')
+                                            label Choose a username:
+                                            input(type='text' class='reg-form' placeholder='Type your username here' id='login-reg-box')
+                                            label Email address:
+                                            input(type='text' class='reg-form' placeholder='Type your email address here' id='email-reg-box')
+                                            label Choose a password:
+                                            input(type='password' class='reg-form' placeholder='Type your password here' id='password-reg-box')
+                                            input(type='submit' id='submit-reg' value='SIGN UP')
+                                            a(href='../login.html') I already have an account
+
+    script(src='js/create.js')           
