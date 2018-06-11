@@ -30,6 +30,6 @@ express()
   .use(express.static(path.join(__dirname, 'app/css')))
   .set('app', path.join(__dirname, 'app'))
   .set('view engine', 'html')
-  .get('app/', (req, res) => res.render('index'))
+  .get('/', (req, res) => res.render('index'))
  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
   
