@@ -1,7 +1,7 @@
-const express = require('express')
-const path = require('path'),
+const express = require('express'),
+
   app = express(),
-const PORT = process.env.PORT || 5000,
+  port = process.env.PORT || 5000,
   mongoose = require('mongoose'),
   Task = require('./api/models/jfgModel'),
   bodyParser = require('body-parser');
@@ -25,11 +25,11 @@ app.listen(port);
 
 console.log('JFG RESTful API server started on: ' + port);
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'html')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+ app.use(express.static(path.join(__dirname, 'public')));
+ app.set('views', path.join(__dirname, 'views'));
+ app.set('view engine', 'html');
+ app.get('/', (req, res) => res.render('pages/index'));
+  
 
   
