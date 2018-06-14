@@ -1,5 +1,4 @@
 const express = require('express'),
-const path = require('path'),
 var ejs = require('ejs'),
 const PORT = process.env.PORT || 5000,
     app = express();
@@ -20,6 +19,4 @@ app.get('/', function(request, response) {
   response.render('app/index.html');
 });
 
-app.listen(app.get('port'), function() {
-  console.log('The app is live on port' + app.get('port'));
-});
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
