@@ -14,7 +14,15 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 */
 
-app.use(express.static(path.join(__dirname, '/app')));
+express()
+  .use(express.static(path.join(__dirname, 'app')))
+  .set('views', path.join(__dirname, 'app'))
+  .engine('html', ejs.renderFile)
+  .set('view engine', 'html')
+  .get('/', (req, res) => res.render('index'))  
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+/*app.use(express.static(path.join(__dirname, '/app')));
 app.set('views', path.join(__dirname ));
 app.engine('ejs', ejs.renderFile);
 app.set('view engine', 'ejs');
@@ -22,4 +30,4 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));*/
