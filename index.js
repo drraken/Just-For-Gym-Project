@@ -16,7 +16,7 @@ app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
-  response.render('app/index.html');
+  response.render('index.html');
 });
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
