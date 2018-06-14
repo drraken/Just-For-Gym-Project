@@ -18,7 +18,7 @@ express()
   .use(express.static(path.join(__dirname, 'app')))
   .set('views', path.join(__dirname, 'app'))
   .engine('html', ejs.renderFile)
-  .set('view engine', 'html')
+  .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('index'))  
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
