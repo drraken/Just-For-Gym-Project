@@ -13,7 +13,7 @@ var path = require('path');
 //
 
 app.use(express.static(path.join(__dirname, 'app')));
-app.set('views', path.join(__dirname));
+app.set('app', path.join(__dirname));
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
