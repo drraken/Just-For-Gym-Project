@@ -9,10 +9,10 @@ var   app = express();
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))*/
-//express.static(__dirname + 'app')
+//
 
-app.use(express.static(path.join(__dirname, 'app')));
-app.set('views', __dirname + 'app');
+app.use(express.static(__dirname, 'app'));
+app.set('views', __dirname, 'app');
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
