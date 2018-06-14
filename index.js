@@ -2,6 +2,7 @@ var express = require('express');
 var ejs = require('ejs');
 var PORT = process.env.PORT || 5000;
 var   app = express();
+var path = require('path');
 
 /*express()
   .use(express.static(path.join(__dirname, 'app')))
@@ -11,8 +12,8 @@ var   app = express();
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))*/
 //
 
-app.use(express.static(__dirname + ''));
-app.set('views', __dirname + 'app' );
+app.use(express.static(path.join(__dirname, 'app')));
+app.set('views', path.join(__dirname, 'app' ));
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
