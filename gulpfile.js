@@ -12,7 +12,7 @@ gulp.task('serve', ['jade','sass'/*, 'scripts'*/], function() {
     });
 
     gulp.watch("src/scss/*.scss", ['sass']);
-    gulp.watch("src/jade/**/*.jade", ['jade']);
+    //gulp.watch("src/jade/**/*.jade", ['jade']);
    /* gulp.watch("src/js/*.js", ['scripts']);*/
 //    gulp.watch("app/*.html").on('change', browserSync.reload);
 });
@@ -27,12 +27,12 @@ gulp.task('sass', function() {
 });
 
 // Compile jade into html files
-gulp.task('jade', function() {
+/*gulp.task('jade', function() {
   return gulp.src("src/jade/*.jade")
     .pipe(jade())
     .pipe(gulp.dest("app/"))
     .pipe(browserSync.stream());
-});
+});*/
 
 /*gulp.task('scripts', function() {
   return gulp.src('src/js/*.js')     
