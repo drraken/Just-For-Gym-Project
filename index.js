@@ -1,7 +1,7 @@
-const express = require('express'),
-const ejs = require('ejs'),
-const PORT = process.env.PORT || 5000,
-    app = express();
+var express = require('express');
+var ejs = require('ejs');
+var PORT = process.env.PORT || 5000;
+var   app = express();
 
 /*express()
   .use(express.static(path.join(__dirname, 'app')))
