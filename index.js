@@ -12,8 +12,8 @@ var path = require('path');
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))*/
 //
 
-app.use(express.static(path.join(__dirname)));
-app.set('views', path.join(__dirname, 'app' ));
+app.use(express.static(path.join(__dirname, 'app')));
+app.set('views', path.join(__dirname));
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
