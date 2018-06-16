@@ -44,9 +44,25 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res){
    res.render('pages/index'); 
 });
-app.get('/login', function(req, res){
-   res.render('pages/login'); 
+app.get('/mycart', function(req, res){
+   res.render('pages/mycart'); 
 });
+app.get('/home', function(req, res){
+   res.render('pages/index'); 
+});
+app.get('/about', function(req, res){
+   res.render('pages/about'); 
+});
+app.get('/products', function(req, res){
+   res.render('pages/products'); 
+});
+app.get('/customers', function(req, res){
+   res.render('pages/customers'); 
+});
+app.get('/contact', function(req, res){
+   res.render('pages/contact'); 
+});
+
 
 app.listen(port, function(){
     console.log('App running on heroku:' + port);
