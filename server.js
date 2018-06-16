@@ -33,9 +33,6 @@ app.get('/', function(req, res){
 app.get('/login', function(req, res){
    res.render('pages/login'); 
 });
-app.get('/mycart', function(req, res){
-   res.render('pages/mycart'); 
-});
 app.get('/index', function(req, res){
    res.render('pages/index'); 
 });
