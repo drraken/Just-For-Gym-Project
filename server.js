@@ -40,19 +40,16 @@ app.get('/', function (request, response) {
 app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
-
-app.get('/login/create', function(req, res){
-   res.render('pages/login'); 
+app.get('/', function(req, res){
+   res.render('../pages/index'); 
 });
-app.get('/login/', function(req, res){
+app.get('/login', function(req, res){
    res.render('pages/login'); 
 });
 app.get('/mycart', function(req, res){
    res.render('pages/mycart'); 
 });
-app.get('/', function(req, res){
-   res.render('../pages/index'); 
-});
+
 app.get('/about', function(req, res){
    res.render('pages/about'); 
 });
