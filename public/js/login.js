@@ -32,6 +32,3 @@ button.addEventListener('click', (e) => {
     CheckTheData(login, password);
 
 })
-app.get('/home', function(req, res){
-   res.render('pages/index'); 
-});
