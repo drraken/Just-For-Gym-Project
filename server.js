@@ -1,10 +1,10 @@
-const express = require('express'),
-    const path = require('path'),
-        app = express(),
-        port = process.env.PORT || 5000,
-        mongoose = require('mongoose'),
-        Task = require('./api/models/jfgModel'),
-        bodyParser = require('body-parser');
+var express = require('express');
+var path = require('path');
+var app = express();
+var port = process.env.PORT || 5000;
+var mongoose = require('mongoose');
+var Task = require('./api/models/jfgModel');
+var bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym');
