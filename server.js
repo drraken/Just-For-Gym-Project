@@ -1,16 +1,16 @@
 var express = require('express');
 //var path = require('path');
 var app = express();
-//var port = process.env.PORT || 5000;
-var mongoose = require('mongoose');
-var Task = require('./api/models/jfgModel');
-var bodyParser = require('body-parser');
+var port = process.env.PORT || 8080;
+//var mongoose = require('mongoose');
+//var Task = require('./api/models/jfgModel');
+//var bodyParser = require('body-parser');
 //var ejs = require('ejs');
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym');
+//mongoose.Promise = global.Promise;
+//mongoose.connect('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym');
 
-mongoose.connection.once('open', function () {
+/*mongoose.connection.once('open', function () {
     console.log('Connection has been made, ')
 }).on('error', function (error) {
     console.log('Connection error:', error);
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 var routes = require('./api/routes/jfgRoutes');
-routes(app);
+routes(app);*/
 
 //app.listen(port);
 
@@ -37,6 +37,17 @@ app.get('/', function (request, response) {
     response.render('index');
 })*/
 
-app.use(express.static(__dirname + '/app'))
-app.listen(process.env.PORT || 5000);
-module.exports = {app}
+app.set('view engine', 'ejs');
+
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', function(req, res){
+   res.render('pages/index'); 
+});
+app.get('/login', function(req, res){
+   res.render('pages/login'); 
+});
+
+app.listen(port, function(){
+    console.log('App running on heroku:' + port);
+});
