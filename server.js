@@ -50,8 +50,8 @@ app.get('/login', function(req, res){
 app.get('/mycart', function(req, res){
    res.render('pages/mycart'); 
 });
-app.get('/login/x', function(req, res){
-   res.render('pages/index'); 
+app.get('/', function(req, res){
+   res.render('../pages/index'); 
 });
 app.get('/about', function(req, res){
    res.render('pages/about'); 
