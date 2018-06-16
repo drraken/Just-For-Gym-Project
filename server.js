@@ -30,7 +30,7 @@ console.log('JFG RESTful API server started on: ' + port);
 
 
 app.use(express.static(path.join(__dirname, 'app')));
-app.set('views', path.join(__dirname, 'app'));
+app.set('views', path.join(__dirname));
 app.engine('html', ejs.renderFile)
 app.set('view engine', 'html');
 app.get('/', function (request, response) {
