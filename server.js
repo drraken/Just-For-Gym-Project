@@ -31,8 +31,8 @@ console.log('JFG RESTful API server started on: ' + port);
 
 app.use(express.static(path.join(__dirname, 'app')));
 app.set('views', path.join(__dirname));
-app.engine('html', ejs.renderFile)
-app.set('view engine', 'html');
+//app.engine('html', ejs.renderFile)
+app.set('view engine', 'ejs');
 app.get('/', function (request, response) {
     response.render('index');
 })
