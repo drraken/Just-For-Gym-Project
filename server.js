@@ -5,17 +5,24 @@ var port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
-
+var MongoClient = mongodb.MongoClient;
 
 mongoose.Promise = global.Promise;
 mongoose.connect('url');
 
-mongoose.connection.once('open', function () {
+/*mongoose.connection.once('open', function () {
     console.log('Connection has been made, ')
 }).on('error', function (error) {
     console.log('Connection error:', error);
-});
+});*/
 
+MongoClient.connect(url, function (err, db) {
+  if (err) {
+    console.log('Unable to connect to the mongoDB server. Error:', err);
+  } else {
+    console.log('Connection established to', url);
+  }
+    });
 app.use(bodyParser.urlencoded({
     extended: true
 }));
