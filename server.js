@@ -7,7 +7,7 @@ const path =require('path'),
   bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/JFG');
+mongoose.connect('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym');
 
 mongoose.connection.once('open', function(){
     console.log('Connection has been made, ')
@@ -29,7 +29,7 @@ console.log('JFG RESTful API server started on: ' + port);
  app.use(express.static(path.join(__dirname, 'public')));
  app.set('views', path.join(__dirname, 'views'));
  app.set('view engine', 'html');
- app.get('/', (req, res) => res.render('pages/index'));
+ app.get('/', (req, res) => res.render('index'));
   
 
   
