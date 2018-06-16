@@ -1,6 +1,6 @@
 let email_reg, login_reg, password_reg;
 const button_reg = document.getElementById('submit-reg');
-
+//dodaje event do buttona oraz wywoluje funckje po kliknieciu
 button_reg.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -8,19 +8,10 @@ button_reg.addEventListener('click', (e) => {
     password_reg = document.getElementById('password-reg-box').value;
     email_reg = document.getElementById('email-reg-box').value;
 
-    tryToCreateAccount(login_reg, password_reg, email_reg);
-    //    
-    //        if (validateEmail(email_reg) || checkTheLogin(login_reg)) {
-    //            addSomeNewData(login_reg, email_reg, password_reg);
-    //            alert('Account successfully created');
-    //            //window.location.replace("http://localhost:3000/index.html");
-    //        } else if (checkTheLogin(login_reg) == 'false') {
-    //            alert('User with that login already exist')
-    //        } else {
-    //            alert('Wrong email address');
-    //        }
+    tryToCreateAccount(login_reg, password_reg, email_reg); 
 })
 
+//sprawdza czy wszystkie dane podane przez uzytkownika sie zgadzaja jesli tak to wywoluje funckje ktora tworzy nowe "konto"
 function tryToCreateAccount(login_reg, password_reg, email_reg) {
     fetch('http://localhost:3009/tasks')
         .then(response => {
@@ -36,7 +27,7 @@ function tryToCreateAccount(login_reg, password_reg, email_reg) {
                 alert('Account successfully created');
                 window.location.replace('index');
             } else if (!vE && iLE) {
-               alert('Wrong email adress and login');
+               alert('Wrong email adress and this login is taken');
             }
             else if (vE && iLE) {
                alert('This login is already taken');
@@ -46,7 +37,7 @@ function tryToCreateAccount(login_reg, password_reg, email_reg) {
             }
         })
 }
-
+//sprawdza czy dany login juz istnieje w bazie danych
 function isLoginExist(data, login) {
     let exist = false;
     data.forEach(element => {
@@ -57,13 +48,13 @@ function isLoginExist(data, login) {
 
     return exist;
 }
-
+//validuje email
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return re.test(email);
 }
-
+//pobiera dane wprowadzone przez uzytkownika i wysyla je do bazy danych
 function addSomeNewData(login_reg, email_reg, password_reg) {
 
     const User = {

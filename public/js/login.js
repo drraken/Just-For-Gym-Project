@@ -1,3 +1,4 @@
+//pobiera dane z bazy danych
 function CheckTheData(l, p) {
     fetch('http://localhost:3009/tasks')
         .then(response => {
@@ -6,7 +7,7 @@ function CheckTheData(l, p) {
         .then(data => sendData(data, l, p));
 }
 
-
+//funckja sprawdzajaca czy dane zgadzaja sie ze soba
 function sendData(thing1, l, p) {
     let valid = false;
     thing1.forEach(element => {
@@ -18,12 +19,12 @@ function sendData(thing1, l, p) {
         alert('Hello ' + l)
         window.location.replace("index");
     } else {
-        alert('Złe dane logowania!');
+        alert('Wrong login data!');
     }
 }
 
 const button = document.getElementById('submit-login');
-
+//tworzy event na kilkniecie i pobiera wprowadzone dane przez uzytkownika
 button.addEventListener('click', (e) => {
     e.preventDefault();
     let login = document.getElementById('login-box').value;

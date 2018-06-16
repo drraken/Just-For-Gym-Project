@@ -8,7 +8,7 @@ var slideIndex = 1;
     function currentSlide(n) {
         showSlides(slideIndex = n);
     }
-
+// prosta karuzela opini klientów z sekcji "Customers"
     function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
