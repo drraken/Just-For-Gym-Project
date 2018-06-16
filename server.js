@@ -1,5 +1,5 @@
 var express = require('express');
-
+var url = prcoess.env.MONGODB_URI;
 var app = express();
 var port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('justforgym');
+mongoose.connect('url');
 
 mongoose.connection.once('open', function () {
     console.log('Connection has been made, ')

@@ -1,5 +1,5 @@
 function CheckTheData(l, p) {
-    fetch('justforgym')
+    fetch('url')
         .then(response => {
             return response.json()
         })
