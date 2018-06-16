@@ -22,7 +22,7 @@ button_reg.addEventListener('click', (e) => {
 })
 
 function tryToCreateAccount(login_reg, password_reg, email_reg) {
-    fetch('MONGODB_URI')
+    fetch('justforgym')
         .then(response => {
             return response.json()
         })
@@ -74,7 +74,7 @@ function addSomeNewData(login_reg, email_reg, password_reg) {
 
     console.log(User);
 
-    fetch('MONGODB_URI', {
+    fetch('justforgym', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'

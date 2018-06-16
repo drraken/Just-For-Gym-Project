@@ -1,5 +1,5 @@
 function CheckTheData(l, p) {
-    fetch('MONGODB_URI')
+    fetch('justforgym')
         .then(response => {
             return response.json()
         })
