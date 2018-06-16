@@ -65,6 +65,9 @@ app.get('/customers', function(req, res){
 app.get('/contact', function(req, res){
    res.render('pages/contact'); 
 });
+app.get('/create', function(req, res){
+   res.render('pages/create'); 
+});
 
 
 app.listen(port, function(){
