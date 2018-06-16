@@ -1,11 +1,11 @@
 var express = require('express');
-var path = require('path');
+//var path = require('path');
 var app = express();
-var port = process.env.PORT || 5000;
+//var port = process.env.PORT || 5000;
 var mongoose = require('mongoose');
 var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
-var ejs = require('ejs');
+//var ejs = require('ejs');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym');
@@ -24,9 +24,9 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/jfgRoutes');
 routes(app);
 
-app.listen(port);
+//app.listen(port);
 
-console.log('JFG RESTful API server started on: ' + port);
+//console.log('JFG RESTful API server started on: ' + port);
 
 /*
 app.use(express.static(path.join(__dirname, 'app')));
@@ -37,9 +37,6 @@ app.get('/', function (request, response) {
     response.render('index');
 })*/
 
-express()
-  .use(express.static(path.join(__dirname, 'app')))
-  .set('views', path.join(__dirname, 'app'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('index')) 
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+app.use(express.static(__dirname + '/app'))
+app.listen(process.env.PORT || 5000);
+module.exports = {app}
