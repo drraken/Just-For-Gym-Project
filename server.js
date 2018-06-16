@@ -1,5 +1,5 @@
 var express = require('express');
-var url = prcoess.env.MONGODB_URI;
+var url = process.env.MONGODB_URI;
 var app = express();
 var port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
