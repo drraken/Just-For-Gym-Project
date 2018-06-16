@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym');
+mongoose.connect('MONGODB_URI');
 
 mongoose.connection.once('open', function () {
     console.log('Connection has been made, ')

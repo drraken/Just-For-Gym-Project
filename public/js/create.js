@@ -22,7 +22,7 @@ button_reg.addEventListener('click', (e) => {
 })
 
 function tryToCreateAccount(login_reg, password_reg, email_reg) {
-    fetch('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym')
+    fetch('MONGODB_URI')
         .then(response => {
             return response.json()
         })
@@ -74,7 +74,7 @@ function addSomeNewData(login_reg, email_reg, password_reg) {
 
     console.log(User);
 
-    fetch('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym', {
+    fetch('MONGODB_URI', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
