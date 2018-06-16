@@ -28,11 +28,18 @@ app.listen(port);
 
 console.log('JFG RESTful API server started on: ' + port);
 
-
+/*
 app.use(express.static(path.join(__dirname, 'app')));
 app.set('views', path.join(__dirname));
 app.engine('ejs', ejs.renderFile)
 app.set('view engine', 'ejs');
 app.get('/', function (request, response) {
     response.render('index');
-})
+})*/
+
+express()
+  .use(express.static(path.join(__dirname, 'app')))
+  .set('views', path.join(__dirname, 'app'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('index')) 
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
