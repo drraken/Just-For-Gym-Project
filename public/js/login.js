@@ -1,5 +1,5 @@
 function CheckTheData(l, p) {
-    fetch('http://localhost:5000/tasks')
+    fetch('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym')
         .then(response => {
             return response.json()
         })
@@ -16,7 +16,7 @@ function sendData(thing1, l, p) {
     })
     if (valid) {
         alert('Hello ' + l)
-        window.location.replace("http://localhost:5000/index.html");
+        window.location.replace("index");
     } else {
         alert('Złe dane logowania!');
     }

@@ -34,7 +34,7 @@ function tryToCreateAccount(login_reg, password_reg, email_reg) {
                 console.log('create');
                 addSomeNewData(login_reg,email_reg,password_reg);
                 alert('Account successfully created');
-                window.location.replace('../index.html');
+                window.location.replace('index');
             } else if (!vE && iLE) {
                alert('Wrong email adress and login');
             }
@@ -74,7 +74,7 @@ function addSomeNewData(login_reg, email_reg, password_reg) {
 
     console.log(User);
 
-    fetch('http://localhost:5000/tasks', {
+    fetch('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
