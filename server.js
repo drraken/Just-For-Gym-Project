@@ -5,6 +5,7 @@ var port = process.env.PORT || 5000;
 var mongoose = require('mongoose');
 var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
+var ejs = require('ejs');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://<drraken1>:<4zuiui5y>@ds161740.mlab.com:61740/justforgym');
