@@ -1,14 +1,14 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 30111;
+var port = process.env.PORT;
 var mongoose = require('mongoose');
 var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://draken:123qwe@ds161740.mlab.com:61740/justforgym');
-
+mongoose.connect('MONGODB_URI');
+//mongodb://draken:123qwe@ds161740.mlab.com:61740/justforgym
 mongoose.connection.once('open', function () {
     console.log('Connection has been made, ')
 }).on('error', function (error) {
