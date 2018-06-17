@@ -4,10 +4,9 @@ module.exports = function(app) {
 
   // userList Routes
   app.route('/tasks')
-    .get(jfgList.list_all_tasks)
-    .get(jfgList.list_all_tasks1)
-    .post(jfgList.create_a_task)
-    .post(jfgList.create_a_task1);
+    .get(jfgList.list_all_tasks) 
+    .post(jfgList.create_a_task);
+
 
 
   app.route('/tasks/:taskId')

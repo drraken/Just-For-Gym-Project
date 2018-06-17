@@ -2,8 +2,8 @@
 
 
 var mongoose = require('mongoose'),
-  Task = mongoose.model('User'),
-  Task1 = mongoose.model('Product');
+  Task = mongoose.model('User');
+  
 
   
 
@@ -17,33 +17,10 @@ res.header("Access-Control-Allow-Origin", "*");
   });
 };
 
-exports.list_all_tasks1 = function(req, res) {
-res.header("Access-Control-Allow-Origin", "*");
-  Task1.find({}, function(err, task) {
-    if (err)
-      res.send(err);
-    res.json(task);
-  });
-};
-
-
-
 
 exports.create_a_task = function(req, res) {
-//    console.log(req);
 res.header("Access-Control-Allow-Origin", "*");
   var new_task = new Task(req.body);
-  new_task.save(function(err, task) {
-    if (err)
-      res.send(err);
-    res.json(task);
-  });
-};
-
-exports.create_a_task1 = function(req, res) {
-//    console.log(req);
-res.header("Access-Control-Allow-Origin", "*");
-  var new_task = new Task1(req.body);
   new_task.save(function(err, task) {
     if (err)
       res.send(err);
