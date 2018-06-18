@@ -12,7 +12,6 @@ mongoose.connection.once('open', function () {
 }).on('error', function (error) {
     console.log('Connection error:', error);
 });
-//'mongodb://draken:123qwe@ds161740.mlab.com:61740/justforgym');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
