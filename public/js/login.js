@@ -1,6 +1,6 @@
 //pobiera dane z bazy danych
 function CheckTheData(l, p) {
-    fetch('https://radiant-brook-14678/api/routes/jfgRoutes')
+    fetch('https://radiant-brook-14678.herokuapp.com/tasks')
         .then(response => {
             return response.json()
         })
