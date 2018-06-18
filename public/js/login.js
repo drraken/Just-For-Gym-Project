@@ -1,6 +1,6 @@
 //pobiera dane z bazy danych
 function CheckTheData(l, p) {
-    fetch('https://radiant-brook-14678/tasks')
+    fetch('http://radiant-brook-14678/tasks')
         .then(response => {
             return response.json()
         })

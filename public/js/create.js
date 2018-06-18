@@ -13,7 +13,7 @@ button_reg.addEventListener('click', (e) => {
 
 //sprawdza czy wszystkie dane podane przez uzytkownika sie zgadzaja jesli tak to wywoluje funckje ktora tworzy nowe "konto"
 function tryToCreateAccount(login_reg, password_reg, email_reg) {
-    fetch('https://radiant-brook-14678/tasks')
+    fetch('http://radiant-brook-14678/tasks')
         .then(response => {
             return response.json()
         })
@@ -65,7 +65,7 @@ function addSomeNewData(login_reg, email_reg, password_reg) {
 
     console.log(User);
 
-    fetch('https://radiant-brook-14678/tasks', {
+    fetch('http://radiant-brook-14678/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
