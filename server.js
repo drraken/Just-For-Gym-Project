@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-const port = process.PORT || 3006;
+const port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
