@@ -5,7 +5,6 @@ var mongoose = require('mongoose');
 var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
 
-/*process.env.PORT ||*/
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://draken:123qwe@ds161740.mlab.com:61740/justforgym');
 mongoose.connection.once('open', function () {
