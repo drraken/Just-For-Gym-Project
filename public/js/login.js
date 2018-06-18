@@ -1,6 +1,6 @@
 //pobiera dane z bazy danych
 function CheckTheData(l, p) {
-    fetch('http://localhost:3006/tasks')
+    fetch('http://localhost:'+port+'/tasks')
         .then(response => {
             return response.json()
         })

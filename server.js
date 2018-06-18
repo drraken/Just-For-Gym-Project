@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port;
+var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
@@ -23,7 +23,7 @@ var routes = require('./api/routes/jfgRoutes');
 routes(app);
 
 app.set('view engine', 'ejs');
-app.set('port', process.env.PORT || 3006);
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){

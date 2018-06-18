@@ -13,7 +13,7 @@ button_reg.addEventListener('click', (e) => {
 
 //sprawdza czy wszystkie dane podane przez uzytkownika sie zgadzaja jesli tak to wywoluje funckje ktora tworzy nowe "konto"
 function tryToCreateAccount(login_reg, password_reg, email_reg) {
-    fetch('http://localhost:3006/tasks')
+    fetch('http://localhost:'+port+'/tasks')
         .then(response => {
             return response.json()
         })
