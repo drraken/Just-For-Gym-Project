@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": " ---  description ---",
   "main": "server.js",
+  "port":'3006',
   "scripts": {
     "start": "node server.js"
   },
