@@ -1,1 +1,1 @@
-web: node server.js runserver localhost:$PORT
+web: node server.js 
