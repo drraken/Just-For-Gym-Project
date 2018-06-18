@@ -1,6 +1,6 @@
-/*//pobiera dane z bazy danych
+//pobiera dane z bazy danych
 function CheckTheData(l, p) {
-    fetch('http://localhost:3006tasks')
+    fetch('http://localhost:3006/tasks')
         .then(response => {
             return response.json()
         })
@@ -32,4 +32,4 @@ button.addEventListener('click', (e) => {
 
     CheckTheData(login, password);
 
-})*/
+})

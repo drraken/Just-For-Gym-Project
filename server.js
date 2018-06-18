@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3006;
+const port = process.env.PORT || 3006;
 var mongoose = require('mongoose');
 var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
@@ -55,38 +55,3 @@ app.get('/create', function(req, res){
 app.listen(port);
 console.log('JFG RESTful API server started on: ' + port);
 
-//pobiera dane z bazy danych
-function CheckTheData(l, p) {
-    fetch('http://localhost:'+port+'tasks')
-        .then(response => {
-            return response.json()
-        })
-        .then(data => sendData(data, l, p));
-}
-
-//funckja sprawdzajaca czy dane zgadzaja sie ze soba
-function sendData(thing1, l, p) {
-    let valid = false;
-    thing1.forEach(element => {
-        if (element.login == l && element.password == p) {
-            valid = true;
-        }
-    })
-    if (valid) {
-        alert('Hello ' + l)
-        window.location.replace("index");
-    } else {
-        alert('Wrong login data!');
-    }
-}
-
-const button = document.getElementById('submit-login');
-//tworzy event na kilkniecie i pobiera wprowadzone dane przez uzytkownika
-button.addEventListener('click', (e) => {
-    e.preventDefault();
-    let login = document.getElementById('login-box').value;
-    let password = document.getElementById('password-box').value;
-
-    CheckTheData(login, password);
-
-})
