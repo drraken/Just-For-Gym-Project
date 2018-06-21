@@ -196,10 +196,13 @@ header .container .row .col-5 ul li:nth-last-child(2) {
 #logout-header {
     border: none;
     height: 40px;
-    margin-top:0;
-    padding-top: 0;
-    color:red;
+  
 }
+#login-header {
+    border: none;
+    height: 40px;
+}
+   
 header .container .row .col-5 ul li:first-child {
     border: none
 }
