@@ -42,7 +42,7 @@ function sendData(thing1, l, p) {
 }
 
 function CheckIfLogOutExist() {
-    if (logOut == true) {
+    if (logOut.lenght > 0) {
          console.log('logout button is working fine');
         let logOut = document.getElementById('logout-header');
         logOut.addEventListener('click', () => {
@@ -55,7 +55,7 @@ function CheckIfLogOutExist() {
 }
 //tworzy event na kilkniecie i pobiera wprowadzone dane przez uzytkownika
 function CheckIfButtonExist() {
-    if (button == true) {
+    if (button.lenght > 0) {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             let login = document.getElementById('login-box').value;
