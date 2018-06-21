@@ -190,7 +190,7 @@ header .container .row .col-5 ul {
     transform: translate(0px, 10px)
 }
 
-header .container .row .col-5 ul li:nth-last-child(3) {
+header .container .row .col-5 ul li:last-child {
     border: none
 }
 #logout-header {
@@ -198,6 +198,8 @@ header .container .row .col-5 ul li:nth-last-child(3) {
     height: 40px;
     margin-top: 0;
     padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
   
 }
 #login-header {
