@@ -43,6 +43,7 @@ function sendData(thing1, l, p) {
 
 function CheckIfLogOutExist() {
     if (logOut == true) {
+         console.log('logout button is working fine');
         let logOut = document.getElementById('logout-header');
         logOut.addEventListener('click', () => {
             sessionStorage.setItem('login', 'false');
@@ -59,7 +60,7 @@ function CheckIfButtonExist() {
             e.preventDefault();
             let login = document.getElementById('login-box').value;
             let password = document.getElementById('password-box').value;
-
+            console.log('button is working fine');
             CheckTheData(login, password);
         })
     } else {
