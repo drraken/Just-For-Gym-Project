@@ -32,9 +32,10 @@ function sendData(thing1, l, p) {
     })
     if (valid) {
         alert('Hello ' + l)
-        sessionStorage.setItem('login', 'true');        
-        window.location.replace("index");
+        sessionStorage.setItem('login', 'true'); 
         toggleLogInLogOut();
+        window.location.replace("index");
+        
 
     } else {
         alert('Wrong login data!');
