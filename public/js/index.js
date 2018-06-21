@@ -9,7 +9,7 @@ function toggleLoginLogOut() {
     let logOut = document.getElementById('logout-header');
     logOut.style.display = lO.style.display == "none" ? "block" : "none";
 }
-if (sessionStorage.getItem('login') == ture) {
+if (sessionStorage.getItem('login') == true) {
     toggleLogInLogOut();
 
 }
