@@ -4,10 +4,10 @@ const button = document.getElementById('submit-login');
 
 function toggleLogInLogOut() {
     let logIn = document.getElementById('login-header');
-    logIn.style.display = lI.style.display == "none" ? "block" : "none";
+    logIn.style.display = logIn.style.display == "none" ? "block" : "none";
 
     let logOut = document.getElementById('logout-header');
-    logOut.style.display = lO.style.display == "none" ? "block" : "none";
+    logOut.style.display = logOut.style.display == "none" ? "block" : "none";
 }
 if (sessionStorage.getItem('login') == true) {
     toggleLogInLogOut();
