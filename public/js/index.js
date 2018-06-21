@@ -12,7 +12,7 @@ function toggleLogInLogOut() {
 }
 if (sessionStorage.getItem('login') == true) {
     toggleLogInLogOut();
-
+    console.log('sesionsstorageworking');
 }
 
 function CheckTheData(l, p) {
@@ -34,7 +34,8 @@ function sendData(thing1, l, p) {
     if (valid) {
         alert('Hello ' + l)
         sessionStorage.setItem('login', 'true'); 
-        toggleLogInLogOut();
+        
+        //toggleLogInLogOut();
         window.location.replace("index");
         
 
