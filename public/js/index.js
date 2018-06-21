@@ -4,6 +4,7 @@ const button = document.getElementById('submit-login');
 
 function toggleLogInLogOut() {
     let logIn = document.getElementById('login-header');
+    console.log(logIn);
     logIn.style.display = logIn.style.display == "none" ? "block" : "none";
 
     let logOut = document.getElementById('logout-header');
