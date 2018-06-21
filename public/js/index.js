@@ -10,9 +10,11 @@ function toggleLogInLogOut() {
     let logOut = document.getElementById('logout-header');
     logOut.style.display = logOut.style.display == "none" ? "block" : "none";
 }
+console.log(sessionStorage.getItem('login'));
 if (sessionStorage.getItem('login') == true) {
-    toggleLogInLogOut();
     console.log('sesionsstorageworking');
+    toggleLogInLogOut();
+   
 }
 
 function CheckTheData(l, p) {
