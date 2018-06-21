@@ -41,3 +41,11 @@ if (sessionVar == 'true') {
     toggleLogInLogOut();
    
 }
+  if (document.getElementById('logout-header')) {         
+        let logOut = document.getElementById('logout-header');
+        logOut.addEventListener('click', () => {
+            sessionStorage.setItem('login', 'false');
+            alert('Logout successfully')
+            toggleLogInLogOut();
+        })
+    }

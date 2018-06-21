@@ -28,6 +28,7 @@
                         <li><img src="../img/my-cart-white.png"></li>
                         <li><a href="#">My cart</a></li>
                         <li><a href="login" id="login-header">Log in </a></li>
+                        <li><a href="#" id="logout-header" style='display: none'>Log out </a></li>
                         <li><img src="../img/log-in-white.png"></li>
                     </ul>
                 </div>
@@ -85,15 +86,7 @@
             </div>
         </div>
     </footer>
-        <script>
-        let sessionVar = sessionStorage.getItem('login');
-        if (sessionVar == 'true') {
-            console.log('sesionsstorageworking');
-            toggleLogInLogOut();
-
-        }
-
-    </script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
