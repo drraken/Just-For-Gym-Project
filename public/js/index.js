@@ -12,7 +12,6 @@ function toggleLogInLogOut() {
 }
 
 let sessionVar = sessionStorage.getItem('login');
-console.log(sessionVar, typeof(sessionVar));
 if (sessionVar == 'true') {
     console.log('sesionsstorageworking');
     toggleLogInLogOut();
