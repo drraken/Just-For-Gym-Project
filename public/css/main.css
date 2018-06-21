@@ -190,7 +190,7 @@ header .container .row .col-5 ul {
     transform: translate(0px, 10px)
 }
 
-header .container .row .col-5 ul li:nth-last-child(2) {
+header .container .row .col-5 ul li:nth-last-child(3) {
     border: none
 }
 #logout-header {
