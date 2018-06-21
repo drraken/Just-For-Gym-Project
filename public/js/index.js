@@ -55,7 +55,7 @@ function CheckIfButtonExist() {
 
             CheckTheData(login, password);
         })
-    }
-} else {
+    } else {
 
+    }
 }
