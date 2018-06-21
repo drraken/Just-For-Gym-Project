@@ -40,11 +40,18 @@ function sendData(thing1, l, p) {
         alert('Wrong login data!');
     }
 }
-logOut.addEventListener('click', () => {
-    sessionStorage.setItem('login', 'false');
-    toggleLogInLogOut();
-})
 
+function CheckIfLogOutExist() {
+    if (logOut == true) {
+        let logOut = document.getElementById('logout-header');
+        logOut.addEventListener('click', () => {
+            sessionStorage.setItem('login', 'false');
+            toggleLogInLogOut();
+        })
+    } else {
+
+    }
+}
 //tworzy event na kilkniecie i pobiera wprowadzone dane przez uzytkownika
 function CheckIfButtonExist() {
     if (button == true) {
