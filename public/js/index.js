@@ -4,7 +4,6 @@ const button = document.getElementById('submit-login');
 
 function toggleLogInLogOut() {
     let logIn = document.getElementById('login-header');
-    console.log(logIn);
     logIn.style.display = logIn.style.display == "none" ? "block" : "none";
 
     let logOut = document.getElementById('logout-header');
@@ -12,8 +11,7 @@ function toggleLogInLogOut() {
 }
 
 let sessionVar = sessionStorage.getItem('login');
-if (sessionVar == 'true') {
-    console.log('sesionsstorageworking');
+if (sessionVar == 'true') {    
     toggleLogInLogOut();
    
 }
