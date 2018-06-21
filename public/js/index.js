@@ -2,7 +2,7 @@ const button = document.getElementById('submit-login');
 
 //pobiera dane z bazy danych
 
-function toggleLoginLogOut() {
+function toggleLogInLogOut() {
     let logIn = document.getElementById('login-header');
     logIn.style.display = lI.style.display == "none" ? "block" : "none";
 
