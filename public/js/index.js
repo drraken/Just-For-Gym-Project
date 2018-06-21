@@ -51,6 +51,7 @@ function sendData(thing1, l, p) {
         let logOut = document.getElementById('logout-header');
         logOut.addEventListener('click', () => {
             sessionStorage.setItem('login', 'false');
+            alert('logout successfull')
             toggleLogInLogOut();
         })
     }

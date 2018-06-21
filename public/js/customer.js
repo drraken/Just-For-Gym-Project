@@ -45,7 +45,7 @@ if (sessionVar == 'true') {
         let logOut = document.getElementById('logout-header');
         logOut.addEventListener('click', () => {
             sessionStorage.setItem('login', 'false');
-            alert('Logout successfully')
+            alert('Logout successfull');
             toggleLogInLogOut();
         })
     }

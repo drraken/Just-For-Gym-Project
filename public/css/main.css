@@ -196,6 +196,8 @@ header .container .row .col-5 ul li:nth-last-child(2) {
 header .container .row .col-5 ul li:nth-last-child(3) {
     border: none;
     height: 40px;
+    margin-top:0;
+    padding-top: 0;
 }
 header .container .row .col-5 ul li:first-child {
     border: none
