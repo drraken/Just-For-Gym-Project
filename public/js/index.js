@@ -1,5 +1,3 @@
-
-
 const button = document.getElementById('submit-login');
 
 //pobiera dane z bazy danych
@@ -51,14 +49,13 @@ logOut.addEventListener('click', () => {
 function CheckIfButtonExist() {
     if (button == true) {
         button.addEventListener('click', (e) => {
-                e.preventDefault();
-                let login = document.getElementById('login-box').value;
-                let password = document.getElementById('password-box').value;
+            e.preventDefault();
+            let login = document.getElementById('login-box').value;
+            let password = document.getElementById('password-box').value;
 
-                CheckTheData(login, password);
-            } else {
-
-            }
-
+            CheckTheData(login, password);
         })
+    }
+} else {
+
 }
