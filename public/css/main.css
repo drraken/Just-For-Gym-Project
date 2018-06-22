@@ -190,12 +190,8 @@ header .container .row .col-5 ul {
     transform: translate(0px, 10px)
 }
 
-header #login_person_image{
-    border: none
-}
 #logout-header {
-    border: none;
-    height: 40px;
+    border: none;    
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
@@ -203,15 +199,20 @@ header #login_person_image{
   
 }
 #login-header {
-    border: none;
-    height: 40px;
+    border: none;      
     margin-top: 0;
     padding-top: 0;
-    
+    padding-bottom: 0;   
 }
    
 header .container .row .col-5 ul li:first-child {
-    border: none
+    border: none;
+}
+header .container .row .col-5 ul li:nth-child(3){
+    border: none;     
+}
+header .container .row .col-5 ul li:nth-child(4){
+    border: none;   
 }
 
 header ul {
@@ -225,7 +226,7 @@ header ul li {
 }
 
 header ul li:last-child {
-    border-right: none
+    border: none
 }
 
 header ul li a {
