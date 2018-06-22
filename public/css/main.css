@@ -165,6 +165,7 @@ main.is-close {
     margin-left: 50%;
     transform: translate(-50%, 0);
     width: 100px;
+    height: 100px;
     border: 1px solid black;
     border-radius: 50%
 }
