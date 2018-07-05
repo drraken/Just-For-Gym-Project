@@ -76,6 +76,7 @@ function addSomeNewData(login_reg, email_reg, password_reg) {
             return response.json()
         })
         .then(data => console.log(data));
+    
 }
 
 function JSON_to_URLEncoded(element, key, list) {

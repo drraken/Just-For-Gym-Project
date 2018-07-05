@@ -185,6 +185,7 @@ header {
     width: 100%;
     z-index: 10
 }
+
 header .container .row .col-5 ul {
     display: flex;
     justify-content: flex-end;
@@ -192,28 +193,31 @@ header .container .row .col-5 ul {
 }
 
 #logout-header {
-    border: none;    
+    border: none;
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-  
+
 }
+
 #login-header {
-    border: none;      
+    border: none;
     margin-top: 0;
     padding-top: 0;
-    padding-bottom: 0;   
+    padding-bottom: 0;
 }
-   
+
 header .container .row .col-5 ul li:first-child {
     border: none;
 }
-header .container .row .col-5 ul li:nth-child(3){
-    border: none;     
+
+header .container .row .col-5 ul li:nth-child(3) {
+    border: none;
 }
-header .container .row .col-5 ul li:nth-child(4){
-    border: none;   
+
+header .container .row .col-5 ul li:nth-child(4) {
+    border: none;
 }
 
 header ul {
@@ -444,7 +448,16 @@ header ul li a:active {
 
 #main-product .product-container p {
     position: absolute;
-    bottom: 0px;
+    bottom: 45px;
+    margin: 0;
+    left: 10px;
+    color: white;
+    font-size: 15px
+}
+
+#main-product .product-container .prod {
+    position: absolute;
+    bottom: 20px;
     margin: 0;
     left: 10px;
     color: white;
@@ -645,8 +658,45 @@ header ul li a:active {
 }
 
 #main-mycart p {
-    color: white
+    color: white;
+    padding-top: 140px;
+    font-size: 45px;
 }
+
+#main-mycart #myCartHeads li {
+    font-size: 25px;
+    margin-right: 150px;
+}
+
+#main-mycart #myCart-container li:last-child {
+    margin-left: 85px;
+
+}
+
+#main-mycart li {
+    display: inline-block;
+    color: white;
+    margin-right: 85px;
+}
+#main-mycart #form-container{
+    position:relative;
+}
+#main-mycart form{
+    position: absolute;
+    top:0px;
+    right:0px;    
+    
+}
+#main-mycart form input{
+    display: block;
+    padding-right: 100px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#main-mycart form input[type="submit"]{    
+    padding: 10px 126px;
+}
+
 
 footer {
     height: 200px;

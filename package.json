@@ -2,11 +2,12 @@
   "name": "package.json",
   "version": "1.0.0",
   "description": " ---  description ---",
-  "main": "server.js", 
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "browser-sync": "^2.23.6",
     "dec": "0.0.1",
     "ejs": "^2.6.1",
@@ -21,6 +22,7 @@
     "mysql": "^2.15.0",
     "nodemon": "^1.17.5",
     "path": "^0.12.7",
-    "save": "^2.3.2"
+    "save": "^2.3.2",
+    "uuid": "^3.3.2"
   }
 }

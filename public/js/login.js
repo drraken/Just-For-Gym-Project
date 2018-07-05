@@ -4,13 +4,13 @@ function CheckTheData(l, p) {
         .then(response => {
             return response.json()
         })
-        .then(data => sendData(data, l, p));
+        .then(data => sendData(data, l, p));    
 }
 
 //funckja sprawdzajaca czy dane zgadzaja sie ze soba
-function sendData(thing1, l, p) {
+function sendData(dbInfo, l, p) {
     let valid = false;
-    thing1.forEach(element => {
+    dbInfo.forEach(element => {
         if (element.login == l && element.password == p) {
             valid = true;
         }
