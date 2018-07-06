@@ -1,3 +1,4 @@
+// toggle przycisku logIn logOut
 function toggleLogInLogOut() {
     let logIn = document.getElementById('login-header');
     logIn.style.display = logIn.style.display == "none" ? "block" : "none";
@@ -19,7 +20,7 @@ if (document.getElementById('logout-header')) {
         toggleLogInLogOut();
     })
 }
-
+//Pobiera dane z sessionStorage i umiesza je w Arrayu
 let dataToSend = [];
 for (let i = 1; i < 13; i++) {
     var data = sessionStorage.getItem("product_" + i);
@@ -34,7 +35,7 @@ for (let i = 1; i < 13; i++) {
 
 let container = document.getElementById('myCart-container');
 let templateString = ``;
-
+//tamplete string który renderuje na stronie pobierane dane z sessionStorage
 dataToSend.forEach((e) => {
     templateString += `<ul class="item">
                         <li> <strong>Name</strong>:  ${e.item} </li>
@@ -51,7 +52,7 @@ container.innerHTML = templateString;
 function RemoveFunction(keyValue) {
     sessionStorage.removeItem("'" + keyValue + "'");
 };
-
+//funckja obslugujaca przycisk do usuwania produktów z koszyka
 function buttonHandler(dataName, idButton) {
     let button = document.getElementById(idButton);
     if (button != null) {
@@ -95,7 +96,7 @@ function tryToSendInfo(name_buy, lastname_buy, email_buy, country_buy, city_buy,
     }
 
 }
-
+//wysyła dane do bazy 
 function addSomeNewData(name_buy, lastname_buy, email_buy, country_buy, city_buy, street_buy) {
 
     const Buyer = {

@@ -1,3 +1,4 @@
+// toggle przycisku logIn logOut
 function toggleLogInLogOut() {
     let logIn = document.getElementById('login-header');
     logIn.style.display = logIn.style.display == "none" ? "block" : "none";

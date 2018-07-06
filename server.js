@@ -6,8 +6,8 @@ var Task = require('./api/models/jfgModel');
 var bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-//mongoose.connect(process.env.MONGODB_URI);
-mongoose.connect("mongodb://draken:123qwe@ds161740.mlab.com:61740/justforgym");
+mongoose.connect(process.env.MONGODB_URI);
+//mongoose.connect("mongodb://draken:123qwe@ds161740.mlab.com:61740/justforgym");
 mongoose.connection.once('open', function () {
     console.log('Connection has been made, ')
 }).on('error', function (error) {

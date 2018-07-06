@@ -1,3 +1,4 @@
+// toggle przycisku logIn logOut
 function toggleLogInLogOut() {
     let logIn = document.getElementById('login-header');
     logIn.style.display = logIn.style.display == "none" ? "block" : "none";
@@ -19,7 +20,7 @@ if (document.getElementById('logout-header')) {
         toggleLogInLogOut();
     })
 }
-
+//obsluguje button który dodaje produkty do SessionStorage
 function buttonHandler(idButton, idName) {
     let button = document.getElementById(idButton);
     let productName = document.getElementById(idName).innerHTML;    

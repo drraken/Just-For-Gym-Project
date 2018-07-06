@@ -692,12 +692,36 @@ header ul li a:active {
     padding-right: 100px;
     padding-top: 6px;
     padding-bottom: 6px;
+    padding-left: 10px;
+    background-color: black;   
+    border:none;
+    border-bottom: 2px solid white;
 }
+#main-mycart form input[type=text]:focus {
+    outline: 3px solid white;
+    
+}
+#main-mycart form input::placeholder {
+    color: white;
+    opacity: 1; 
+}
+#main-mycart form input, select, textarea { 
+color: white; 
+} 
 #main-mycart form input[type="submit"]{    
+    margin-top: 20px;
     padding: 10px 126px;
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
 }
-
-
+#main-mycart form input[type="submit"]:hover{  
+    background-color: white;
+    color: black;       
+}
+#main-mycart button{
+    cursor: pointer;
+}
 footer {
     height: 200px;
     background-color: #3e4354;

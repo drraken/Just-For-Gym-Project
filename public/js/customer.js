@@ -28,6 +28,7 @@ var slideIndex = 1;
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
+// toggle przycisku logIn logOut
 function toggleLogInLogOut() {
     let logIn = document.getElementById('login-header');
     logIn.style.display = logIn.style.display == "none" ? "block" : "none";
