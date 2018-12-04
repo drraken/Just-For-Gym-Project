@@ -46,8 +46,7 @@ function sendData(thing1, l, p) {
 }
 
 
-    if (document.getElementById('logout-header')) {
-         console.log('logout button is working fine');
+    if (document.getElementById('logout-header')) {        
         let logOut = document.getElementById('logout-header');
         logOut.addEventListener('click', () => {
             sessionStorage.setItem('login', 'false');
@@ -65,7 +64,6 @@ function sendData(thing1, l, p) {
             e.preventDefault();
             let login = document.getElementById('login-box').value;
             let password = document.getElementById('password-box').value;
-            console.log('button is working fine');
             CheckTheData(login, password);
         })
     } 
