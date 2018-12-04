@@ -258,7 +258,7 @@ header ul li a:active {
 
 #main-index h1 {
     position: absolute;
-    top: 70vh;
+    top: 60vh;
     right: 200px;
     color: whitesmoke
 }
@@ -266,14 +266,14 @@ header ul li a:active {
 #main-index h2 {
     color: white;
     position: absolute;
-    top: 75vh;
+    top: 66vh;
     right: 100px;
     text-align: center
 }
 
 #main-index a {
     position: absolute;
-    top: 80vh;
+    top: 75vh;
     right: 170px;
     border: 2px solid white;
     padding: 20px 60px 20px 60px;

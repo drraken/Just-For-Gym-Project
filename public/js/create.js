@@ -13,7 +13,7 @@ button_reg.addEventListener('click', (e) => {
 
 //sprawdza czy wszystkie dane podane przez uzytkownika sie zgadzaja jesli tak to wywoluje funckje ktora tworzy nowe "konto"
 function tryToCreateAccount(login_reg, password_reg, email_reg) {
-    fetch('https://radiant-brook-14678.herokuapp.com/tasks')
+    fetch('https://justforgym.herokuapp.com/tasks')
         .then(response => {
             return response.json()
         })
