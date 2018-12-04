@@ -65,7 +65,7 @@ function addSomeNewData(login_reg, email_reg, password_reg) {
 
     console.log(User);
 
-    fetch('https://radiant-brook-14678.herokuapp.com/tasks', {
+    fetch('https://justforgym.herokuapp.com/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'

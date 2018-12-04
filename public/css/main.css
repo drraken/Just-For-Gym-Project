@@ -258,7 +258,7 @@ header ul li a:active {
 
 #main-index h1 {
     position: absolute;
-    top: 400px;
+    top: 70vh;
     right: 200px;
     color: whitesmoke
 }
@@ -266,14 +266,14 @@ header ul li a:active {
 #main-index h2 {
     color: white;
     position: absolute;
-    top: 470px;
+    top: 75vh;
     right: 100px;
     text-align: center
 }
 
 #main-index a {
     position: absolute;
-    top: 590px;
+    top: 80vh;
     right: 170px;
     border: 2px solid white;
     padding: 20px 60px 20px 60px;
@@ -282,6 +282,7 @@ header ul li a:active {
     border-radius: 50px 50px 50px 50px;
     font-size: 30px
 }
+
 
 #main-customers {
     background-image: url(../img/background-customers.jpg);

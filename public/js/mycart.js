@@ -110,7 +110,7 @@ function addSomeNewData(name_buy, lastname_buy, email_buy, country_buy, city_buy
     }
 
 
-    fetch('https://radiant-brook-14678.herokuapp.com/buyer', {
+    fetch('https://justforgym.herokuapp.com/buyer', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'

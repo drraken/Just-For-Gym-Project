@@ -17,7 +17,7 @@ if (sessionVar == 'true') {
 }
 
 function CheckTheData(l, p) {
-    fetch('https://radiant-brook-14678.herokuapp.com/tasks')
+    fetch('https://justforgym.herokuapp.com/tasks')
         .then(response => {
             return response.json()
         })
